@@ -1,3 +1,48 @@
+# Deploying On Heroku :-
+#Deploying on Heroku
+- First Run Bot locally on your computer i.e: Do above steps and get G-Drive Token File( token.pickle )
+- Change Bot Download Dir to /bot/downloads in config.ini file.
+- Install [Heroku cli](https://devcenter.heroku.com/articles/heroku-cli)
+- Login into your heroku account with command:
+```
+heroku login
+```
+- Create a new heroku app:
+```
+heroku create appname	
+```
+- Select This App in your Heroku-cli: 
+```
+heroku git:remote -a appname
+```
+- Change Dyno Stack to a Docker Container:
+```
+heroku stack:set container
+```
+- Add Private Credentials and Config Stuff:
+```
+git add . --force
+```
+- Commit new changes:
+```
+git commit -m "Initial Commit"
+```
+- Push Code to Heroku:
+```
+git push heroku master --force
+```
+- Restart Worker by these commands:
+```
+heroku ps:scale worker=0
+```
+```
+heroku ps:scale worker=1	
+```
+
+Heroku-Note: Doing authorizations ( /authorize command ) through telegram wont be permanent as heroku uses ephemeral filesystem. They will be reset on each dyno boot.
+
+
+
 # Important - Read these points first
 
 - Original repo is https://github.com/lzzy12/python-aria-mirror-bot
