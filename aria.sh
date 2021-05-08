@@ -5,6 +5,7 @@ aria2c \
 --bt-enable-lpd=true \
 --bt-max-peers=0 \
 --bt-tracker="[$TRACKERS]" \
+--bt-stop-timeout=500 \
 --check-certificate=false \
 --daemon=true \
 --enable-rpc \
