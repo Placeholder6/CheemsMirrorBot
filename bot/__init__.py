@@ -204,6 +204,36 @@ except KeyError:
     SHORTENER = None
     SHORTENER_API = None
 
+ADMINS = set()
+if os.path.exists('admins.txt'):
+    with open('admins.txt', 'r+') as f:
+        lines = f.readlines()
+        for line in lines:
+            #    LOGGER.info(line.split())
+            ADMINS.add(int(line.split()[0]))
+try:
+    achats = getConfig('ADMINS')
+    achats = achats.split(" ")
+    for chats in achats:
+        ADMINS.add(int(chats))
+except:
+    pass
+
+OWNERS = set()
+if os.path.exists('owners.txt'):
+    with open('owners.txt', 'r+') as f:
+        lines = f.readlines()
+        for line in lines:
+            #    LOGGER.info(line.split())
+            OWNERS.add(int(line.split()[0]))
+try:
+    achats = getConfig('OWNERS')
+    achats = achats.split(" ")
+    for chats in achats:
+        OWNERS.add(int(chats))
+except:
+    pass
+
 updater = tg.Updater(token=BOT_TOKEN)
 bot = updater.bot
 dispatcher = updater.dispatcher
