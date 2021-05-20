@@ -357,7 +357,7 @@ class GoogleDriveHelper:
                     buttons.buildbutton("Drive Link", durl)
                 try:
                     msg += f'\n<b>Size : </b><code>{get_readable_file_size(int(meta.get("size")))}</code>' \
-                           f'\n\n<b>Join Our Group</b>  @ghost_mirror'
+                           f'\n\n<b>Telegram Group :</b> @ghost_mirror'
                 except TypeError:
                     pass
                 if INDEX_URL is not None:
