@@ -152,6 +152,8 @@ Fill up rest of the fields. Meaning of each fields are discussed below:
 
 Note :- Above are the supported url shorteners. Except these only some url shorteners are supported. If you want to use any other url shortener then first ask me that shortener is supported or not.
 - **SHORTENER_API**: Fill your shortener api key if you are using shortener.
+- **IGNORE_PENDING_REQUESTS**: (Optional field) If you want the bot to ignore
+  pending requests it restarts, set this to `True`.
 
 Note: You can limit maximum concurrent downloads by changing the value of MAX_CONCURRENT_DOWNLOADS in aria.sh. By default, it's set to 4
 
