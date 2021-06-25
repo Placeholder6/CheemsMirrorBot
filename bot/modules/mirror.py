@@ -172,7 +172,7 @@ class MirrorListener(listeners.MirrorListeners):
         with download_dict_lock:
             msg = (
                f"<b>Filename : </b><code>{download_dict[self.uid].name()}</code>\n<b>Size : </b><code>{size}</code>"
-               f"\n\n<b>Telegram Group :</b> @ghost_mirror"
+               f"\n\n<b>Telegram Group :</b> @CheemsMirror"
             )
             buttons = button_build.ButtonMaker()
             if SHORTENER is not None and SHORTENER_API is not None:
